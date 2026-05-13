@@ -3,3 +3,16 @@ Developed a student productivity app using Android Studio with features like log
 ## System Architecture
 
 ![System Architecture](system_architecture.png)
+## App Screenshots
+
+### Dashboard
+![Dashboard](dashboard.png)
+
+### AI Planner
+![AI Planner](planner.png)
+
+### App Blocking
+![App Blocking](blockapps.png)
+
+### Statistics
+![Statistics](stats.png)
