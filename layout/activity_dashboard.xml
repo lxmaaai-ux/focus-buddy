@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1F2A3A"
+    android:padding="20dp">
+
+    <!-- MENU BUTTON (Top Right) -->
+    <ImageButton
+        android:id="@+id/menuBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_menu"
+        android:contentDescription="Menu"
+        android:tint="#FFC107"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@id/menuBtn">
+
+        <!-- WELCOME -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome 👋"
+            android:textColor="#FFC107"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- TODAY TIME -->
+        <TextView
+            android:id="@+id/totalTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today Study Time: 00:00:00"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- PROGRESS BAR -->
+        <ProgressBar
+            android:id="@+id/dailyProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="200dp"
+            android:layout_height="10dp"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="#FFC107"
+            android:layout_marginBottom="5dp"/>
+
+        <!-- PROGRESS TEXT -->
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Progress: 0%"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- 🔥 STREAK -->
+        <TextView
+            android:id="@+id/streakText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔥 Streak: 0 days"
+            android:textColor="#FFC107"
+            android:layout_marginBottom="5dp"/>
+
+        <!-- 🎮 LEVEL -->
+        <TextView
+            android:id="@+id/levelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎮 Level: 0 (XP: 0)"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- MAIN BUTTONS -->
+        <Button
+            android:id="@+id/aiBtn"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="GENERATE PLAN"
+            android:backgroundTint="#FFC107"
+            android:textColor="#000"
+            android:layout_marginBottom="15dp"/>
+
+        <Button
+            android:id="@+id/startTimerBtn"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="START TIMER"
+            android:backgroundTint="#FFC107"
+            android:textColor="#000"
+            android:layout_marginBottom="15dp"/>
+
+        <Button
+            android:id="@+id/viewStatusBtn"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="VIEW STATS"
+            android:backgroundTint="#FFC107"
+            android:textColor="#000"
+            android:layout_marginBottom="15dp"/>
+
+        <Button
+            android:id="@+id/addTaskBtn"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="ADD TASK"
+            android:backgroundTint="#FFC107"
+            android:textColor="#000"
+            android:layout_marginBottom="15dp"/>
+
+        <Button
+            android:id="@+id/blockAppsBtn"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="BLOCK APPS 🚫"
+            android:backgroundTint="#FFC107"
+            android:textColor="#000"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- LOGOUT -->
+        <TextView
+            android:id="@+id/logoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Logout"
+            android:textColor="#FFC107"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</RelativeLayout>
