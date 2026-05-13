@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.focusbuddy">
+
+    <!-- ✅ PERMISSIONS -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
+        tools:node="replace" />
+
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <application
+        android:allowBackup="true"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+
+        <!-- ✅ MAIN LAUNCHER -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- ✅ OTHER ACTIVITIES -->
+        <activity android:name=".DashboardActivity" android:exported="false"/>
+        <activity android:name=".TimerActivity" android:exported="false"/>
+        <activity android:name=".BlockAppsActivity" android:exported="false"/>
+        <activity android:name=".BlockScreenActivity" android:exported="false"/>
+        <activity android:name=".RegisterActivity" android:exported="false"/>
+        <activity android:name=".AiActivity" android:exported="false"/>
+        <activity android:name=".StatsActivity" android:exported="false"/>
+        <activity android:name=".TaskActivity" android:exported="false"/>
+        <activity android:name=".HistoryActivity" android:exported="false"/>
+
+        <!-- ✅ SERVICES -->
+        <service
+            android:name=".AppBlockService"
+            android:exported="false"/>
+
+        <service
+            android:name=".TimerService"
+            android:foregroundServiceType="specialUse"
+            android:exported="false">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Timer for study focus mode" />
+        </service>
+
+    </application>
+
+</manifest>
